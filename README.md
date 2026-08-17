@@ -16,4 +16,9 @@ Tein tehtävät 1-6 + Projekti 1.
 
 ## Moduuli 4
 
+Tein tehtävät 1-4.
 
+## Moduuli 5
+
+Tein tehtävät
+3. tehtävästä tuli ruma.
