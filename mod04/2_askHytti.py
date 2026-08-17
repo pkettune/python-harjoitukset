@@ -1,12 +1,16 @@
-hytti = input("Mikä hyttiluokka?\n")
+hytti_input = input("Mikä hyttiluokka?\n")
 
-if hytti == "LUX" or "lux" or "Lux":
+hytti_clean = hytti_input.strip().casefold()
+#.strip() ignore leading/trailing whitespace
+#.casefold() compare case-insensitively
+
+if hytti_clean == "lux":
     print ("Parvekkeellinen hytti yläkannella")
-elif hytti == "A" or "a":
+elif hytti_clean == "a":
     print ("Ikkunallinen hytti autokannen yläpuolella")
-elif hytti == "B" or "b":
+elif hytti_clean == "b":
     print ("ikkunaton hytti autokannen yläpuolella")
-elif hytti == "C" or "c":
+elif hytti_clean == "c":
     print ("ikkunaton hytti autokannen yläpuolella")
 else:
     print("Virheellinen hyttiluokka") 
