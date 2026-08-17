@@ -8,12 +8,4 @@ Tein tehtävät 1 ja 2.
 
 ## Moduuli 2
 
-Tein tehtävät 1 ja 2.
-
-## Moduuli 3
-
-Tein tehtävät 1-6 + Projekti 1.
-
-## Moduuli 4
-
 
