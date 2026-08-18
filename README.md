@@ -20,5 +20,5 @@ Tein tehtävät 1-4.
 
 ## Moduuli 5
 
-Tein tehtävät
+Tein tehtävät 1-6 + Projekti 2.
 3. tehtävästä tuli ruma.
