@@ -3,20 +3,25 @@ import math
 
 numberOfPoints = int(input("how many points"))
 i = 0
-n = 0
+N = numberOfPoints
+n = 0 # number of points inside circle
 
 min = -1
 max = 1
 
-x = random.uniform(min, max)
-y = random.uniform(min, max)
+# x = random.uniform(min, max)
+# y = random.uniform(min, max)
+
+# pi = math.pi
+# A = pi/4
+# ympyrän pinta-ala = n =
 
 while (i <= numberOfPoints):
+    x = random.uniform(min, max)
+    y = random.uniform(min, max)
     if (x**2+y**2 < 1):
-        print(x, y)
+#        print(x, y)
         n = n + 1
-    else:
-        n = n
     i = i + 1
 
-
+print(f"{4*n/N}")
