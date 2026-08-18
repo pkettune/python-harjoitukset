@@ -1,5 +1,4 @@
 import random
-import math
 
 numberOfPoints = int(input("how many points"))
 i = 0
@@ -14,13 +13,11 @@ max = 1
 
 # pi = math.pi
 # A = pi/4
-# ympyrän pinta-ala = n =
 
 while (i <= numberOfPoints):
     x = random.uniform(min, max)
     y = random.uniform(min, max)
     if (x**2+y**2 < 1):
-#        print(x, y)
         n = n + 1
     i = i + 1
 
