@@ -4,6 +4,24 @@ name = input("WHAT IS YOUR NAME?\n")
 age = int(input("WHAT IS YOUR AGE?\n"))
 komento = str
 
+itemList = []
+
+def add_item():
+    item = input("What item you want to add? ")
+    itemList.append(item)
+    return
+
+def show_items():
+    for i in itemList:
+        print(itemList[0])
+        return
+
+def change_name():
+    newName = input("Tell me your new name")
+    name = newName
+    return
+
+
 while(komento != "lopeta"):
     if(age < 12):
         print("alaikäinen")
@@ -12,14 +30,17 @@ while(komento != "lopeta"):
         print("\nwelcome " + name)
 
         while (input):
-            print("\nKomennot:\n'a'\n'dice'\n'time'\n'lopeta'\n")
+            print("\nKomennot:\n'a(add item)'\n's(show items)'\n'name(change name)'\n'lopeta'\n")
             komento = input("Anna komento: ")
             if komento == "a":
-                print("\na is the first letter of the alphabet")
-            elif komento == "dice":
-                print(f"\nDice rolled: {random.randint(1, 6)}")
-            elif komento == "time":
-                print("\nit's showtime")
+                add_item()
+                #print("\na is the first letter of the alphabet")
+            elif komento == "s":
+                show_items()
+                #print(f"\nDice rolled: {random.randint(1, 6)}")
+            elif komento == "name":
+                change_name()
+                #print("\nit's showtime")
             elif (komento == "lopeta"):
                 break
             else:
