@@ -2,15 +2,15 @@ import random
 
 dice = 0
 
-sides = int(input("How many sides in the die? "))
+sideInput = int(input("How many sides in the die? "))
 
-def throw(side):
-    side = sides
-    return random.randint(1,side)
+def throw(sideCount):
+    sideCount = sideInput
+    return random.randint(1,sideCount)
 
-while (dice <= sides):
-    dice = throw(sides)
-    if(dice < sides):
+while (dice <= sideInput):
+    dice = throw(sideInput)
+    if(dice < sideInput):
         print(dice)
     else:
         print(dice)
