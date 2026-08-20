@@ -12,13 +12,14 @@ def add_item():
     return
 
 def show_items():
-    for i in itemList:
-        print(itemList[0])
-        return
+    #for i in itemList:
+    print(itemList)
+    return
 
 def change_name():
-    newName = input("Tell me your new name")
+    newName = input("Tell me your new name\n")
     name = newName
+    print("\nWelcome " + name)
     return
 
 
@@ -27,7 +28,7 @@ while(komento != "lopeta"):
         print("alaikäinen")
         break
     if(age >= 12):
-        print("\nwelcome " + name)
+        print("\nWelcome " + name)
 
         while (input):
             print("\nKomennot:\n'a(add item)'\n's(show items)'\n'name(change name)'\n'lopeta'\n")
