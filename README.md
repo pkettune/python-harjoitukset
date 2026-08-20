@@ -24,4 +24,8 @@ Tein tehtävät 1-4.
 
 ## Moduuli 7
 
-Tein tehtävän 1-2.
+Tein tehtävät 1-6 * Projekti 3.
+
+## Moduuli 8
+
+Tein tehtävät 1-
