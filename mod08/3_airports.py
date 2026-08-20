@@ -1,29 +1,31 @@
-spring = (3, 4, 5)
-summer = (6, 7, 8)
-fall = (9, 10, 11)
-winter = (12, 1, 2)
+airports = {"EFHK": "Helsinki-Vantaa",
+           "EFHV": "Hyvinkää Airport",
+           "EFKS": "Kuusamo Airport",
+           "EFTP": "Tampere-Pirkkala Airport"
+           }
 
-seasons = [
-    {
-        "name": "spring",
-        "monthNumber" : (3, 4, 5)
-    },
-    {
-        "name": "summer",
-        "monthNumber" : (6, 7, 8)
-    },
-    {
-        "name": "fall",
-        "monthNumber" : (9, 10, 11)
-    },
-    {
-        "name": "winter",
-        "monthNumber" : (12, 1, 2)
-    }
-]
+def insert_new_airport():
+    icao_input = input("ICAO-code? ")
+    name_input = input("Name of the airport? ")
+    airports[icao_input] = name_input
 
-numberOfMonth = int(input("Give number of a month (1-12)"))
+def find_airport():
+    icao_code = input("Search by ICAO ")
+    if icao_code in airports:
+        print (f"\nAirport {icao_code} is {airports[icao_code]}")
 
-season = seasons[numberOfMonth]
+while True:
+    user_input = input("\nWhat you want to do?\n\nAdd new airport (add)\nFind airport from database (find)\nQuit (q)\n\n")
 
-print(f"Season is {season}")
+    if user_input == "new":
+        insert_new_airport()
+
+    elif user_input == "find":
+        find_airport()
+
+    elif user_input == "q":
+        print(airports)
+        break
+    
+    else:
+        print("Invalid input!")
