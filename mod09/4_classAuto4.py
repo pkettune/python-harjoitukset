@@ -40,18 +40,3 @@ for auto in autot:
 
 for auto in autot:
     print(f"Reg: {auto.reg}, Top speed: {auto.topSpeed}, Current speed: {auto.currentSpeed}, Distance travelled: {auto.distanceTravelled}")
-
-
-# auto.accelerate(30)
-# auto.drive(5)
-# print(auto.distanceTravelled)
-# auto.accelerate(70)
-# auto.drive(1)
-# print(auto.distanceTravelled)
-# auto.accelerate(50)
-# auto.drive(2)
-# print(auto.currentSpeed)
-# print(auto.distanceTravelled)
-# auto.accelerate(-200)
-#print(auto.currentSpeed)
-#print(f"{auto.reg}, {auto.topSpeed}km/h, {auto.currentSpeed}, {auto.distanceTravelled}")
