@@ -26,20 +26,19 @@ class Talo:
     def __init__(self, bottomFloor, highestFloor, numberOfElevators):
         self.bottomFloor = bottomFloor
         self.highestFloor = highestFloor
-        self.elevators = [numberOfElevators + 1]# + 1 for the right number of the elevator
+        self.elevators = []# this should be left empty!!!!!!!!!!!!!!!!!!!!!
+
         for i in range(numberOfElevators):
             self.elevators.append(Hissi(bottomFloor, highestFloor))
 
     def use_elevator(self, elevatorNumber, targetFloor):
-        self.elevators[elevatorNumber].move_to_floor(targetFloor)
+        self.elevators[elevatorNumber - 1].move_to_floor(targetFloor)# - 1 for correct elevator number (staring from 1.)
 
     def fire_alarm(self):
-        i = 1
-        while (i < len(self.elevators)):
-            for elevator in self.elevators:############################################
-                self.elevators[i].move_to_floor(self.bottomFloor)
-            i += 1
+        for elevator in self.elevators:
+            elevator.move_to_floor(self.bottomFloor)
 
+#https://stackoverflow.com/questions/522563/how-can-i-access-the-index-value-in-a-for-loop
 
 t = Talo(1, 9, 4)
 t.use_elevator(1, 2)
