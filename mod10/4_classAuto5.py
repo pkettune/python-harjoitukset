@@ -53,6 +53,8 @@ class Race:
     def race_ended(self):
         for car in self.participants:
             if car.distanceTravelled >= self.length:
+                self.participants.sort(key=lambda sort: sort.distanceTravelled, reverse=True)
+                #https://stackoverflow.com/questions/403421/how-do-i-sort-a-list-of-objects-based-on-an-attribute-of-the-objects
                 return True
         return False
 
