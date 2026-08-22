@@ -46,20 +46,16 @@ class Race:
             car.drive(1)
         
     def checkpoint_positions(self):
+        print("\n")
         for car in self.participants:
             print(f"Reg: {car.reg}, Top speed: {car.topSpeed}, Current speed: {car.currentSpeed}, Distance travelled: {car.distanceTravelled}")
 
     def race_ended(self):
-        i = 0
-        while (i < len(self.participants)):
-            for car in self.participants:
-                if car.distanceTravelled >= self.length:
-                    return True
-                else:
-                    i += 1
-        if i == 10:
-            return False
-                
+        for car in self.participants:
+            if car.distanceTravelled >= self.length:
+                return True
+        return False
+
 
 r = Race("Suuri Romuralli", 8000, 10)
 
@@ -71,7 +67,7 @@ while (r.race_ended() == False):
     r.hour_is_passed()
     hoursPassed += 1
     r.race_ended()
-print("\nFinal Stats\n")
+print("\n\nFinal Stats:")
 r.checkpoint_positions()
 # for auto in autot:
 #     print(f"Reg: {auto.reg}, Top speed: {auto.topSpeed}, Current speed: {auto.currentSpeed}, Distance travelled: {auto.distanceTravelled}")
