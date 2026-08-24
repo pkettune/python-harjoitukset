@@ -1,5 +1,4 @@
 import random
-import player
 
 name = input("WHAT IS YOUR NAME?\n")
 age = int(input("WHAT IS YOUR AGE?\n"))
