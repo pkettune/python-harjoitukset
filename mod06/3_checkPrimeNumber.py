@@ -7,7 +7,7 @@ numbers = list(range(numberInput))
 # for i in range(numberInput):
 #     numbers.append(i)
 
-primeNumber = bool
+primeNumber = bool()
 
 #aloitetaan indexistä 2, koska emme halua jakaa 0:lla tai 1:llä
 for n in range(2, numberInput):
