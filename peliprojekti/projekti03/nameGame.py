@@ -1,23 +1,19 @@
 import random
-from player import Player
-from room import Room
-import items
-import tools
 
 name = input("WHAT IS YOUR NAME?\n")
 age = int(input("WHAT IS YOUR AGE?\n"))
 komento = str
 
 itemList = []
-roomList = []
 
-def add_item(item):
-    Player.collect_item(item)
+def add_item():
+    item = input("What item you want to add? ")
+    itemList.append(item)
     return
 
 def show_items():
-    for item in Player.items:
-        print(item)
+    #for i in itemList:
+    print(itemList)
     return
 
 def change_name():
@@ -33,13 +29,12 @@ while(komento != "lopeta"):
         break
     if(age >= 12):
         print("\nWelcome " + name)
-        Player(name)
 
         while (input):
             print("\nKomennot:\n'a(add item)'\n's(show items)'\n'name(change name)'\n'lopeta'\n")
             komento = input("Anna komento: ")
             if komento == "a":
-                add_item(Room.itemToFind)
+                add_item()
                 #print("\na is the first letter of the alphabet")
             elif komento == "s":
                 show_items()

@@ -8,12 +8,6 @@ n = 0 # number of points inside circle
 min = -1
 max = 1
 
-# x = random.uniform(min, max)
-# y = random.uniform(min, max)
-
-# pi = math.pi
-# A = pi/4
-
 while (i <= numberOfPoints):
     x = random.uniform(min, max)
     y = random.uniform(min, max)
@@ -22,3 +16,6 @@ while (i <= numberOfPoints):
     i = i + 1
 
 print(f"{4*n/N}")
+
+# pi = math.pi
+# A = pi/4

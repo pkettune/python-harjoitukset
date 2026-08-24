@@ -1,4 +1,8 @@
+<<<<<<< HEAD:peliprojekti/room.py
 from items import Item
+=======
+import peliprojekti.projekti04.item as item
+>>>>>>> 0a4762588685130a1b76dbf14766f40617105648:peliprojekti/projekti04/room.py
 import random
 
 roomList = {}
