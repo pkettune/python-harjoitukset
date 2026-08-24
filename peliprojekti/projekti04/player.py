@@ -1,8 +1,4 @@
-<<<<<<< HEAD:peliprojekti/player.py
 import items
-=======
-import peliprojekti.projekti04.item as item
->>>>>>> 0a4762588685130a1b76dbf14766f40617105648:peliprojekti/projekti04/player.py
 
 class Player:
     def __init__(self, name):

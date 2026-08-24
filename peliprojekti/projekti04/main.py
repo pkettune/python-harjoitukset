@@ -1,13 +1,8 @@
 import random
-<<<<<<< HEAD:peliprojekti/main.py
 from player import Player
 from room import Room
 import items
 import tools
-=======
-from peliprojekti.projekti04.player import Player
-import peliprojekti.projekti04.room as room
->>>>>>> 0a4762588685130a1b76dbf14766f40617105648:peliprojekti/projekti04/main.py
 
 name = input("WHAT IS YOUR NAME?\n")
 age = int(input("WHAT IS YOUR AGE?\n"))

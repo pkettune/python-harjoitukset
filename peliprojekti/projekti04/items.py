@@ -21,6 +21,6 @@ class Item():
                 self.weight = item["weight"]
         print (name)
         print (self.weight)
-        return self.name, self.weight
+        return f"{self.name}, {self.weight}"
 
 print (Item("Note"))
