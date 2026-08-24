@@ -18,10 +18,6 @@ def compare_pizzas(diameter, price):
             print("second pizza has greater value")
 
 
-
-
-
-
 while (pizzaCount < 2):
     pizzaDiameter = float(input("Diameter of the pizza? "))
     pizzaPrice = float(input("Price of the pizza? "))

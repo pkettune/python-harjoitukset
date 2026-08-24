@@ -12,4 +12,3 @@ class Player:
         self.items.append(newItem)
         self.itemLoad += itemWeight
         return
-    
