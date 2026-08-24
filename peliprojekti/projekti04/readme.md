@@ -1,3 +1,3 @@
-Henkilöpeli
+Tekstiseikkailu
 
 Petri Kettunen
