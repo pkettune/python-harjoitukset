@@ -1,6 +1,6 @@
 import random
-from player import Player
-import room
+from peliprojekti.projekti04.player import Player
+import peliprojekti.projekti04.room as room
 
 name = input("WHAT IS YOUR NAME?\n")
 age = int(input("WHAT IS YOUR AGE?\n"))

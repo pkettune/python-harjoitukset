@@ -1,4 +1,4 @@
-import item
+import peliprojekti.projekti04.item as item
 
 class Player:
     def __init__(self, name, items, locX, locY):

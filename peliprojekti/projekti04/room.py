@@ -1,4 +1,4 @@
-import item
+import peliprojekti.projekti04.item as item
 import random
 
 roomList = {}
