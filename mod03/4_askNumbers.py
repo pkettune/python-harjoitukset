@@ -1,12 +1,6 @@
-import math
-
-a_str = input("Anna ensimmäinen numero\n")
-b_str = input("Anna toinen numero\n")
-c_str = input("Anna kolmas numero\n")
-
-a = float(a_str)
-b = float (b_str)
-c = float (c_str)
+a = float(input("Anna ensimmäinen numero\n"))
+b = float(input("Anna toinen numero\n"))
+c = float(input("Anna kolmas numero\n"))
 
 summa = a + b + c
 tulo = a * b * c
