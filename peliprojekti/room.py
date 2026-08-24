@@ -1,8 +1,7 @@
-import item
+from items import Item
 import random
 
 roomList = {}
-foundItem = None
 
 class Room:
     def __init__(self, xCor, yCor):
@@ -11,18 +10,17 @@ class Room:
         spawnNumber = random.randint(1, 10)
         print (spawnNumber)
         if (spawnNumber == 1):
-            itemToFind = item.Knife()
+            itemToFind = Item("Knife")
             roomList[self.roomNumber] = itemToFind
         elif (spawnNumber == 2):
-            itemToFind = item.Rock()
+            itemToFind = Item("Rock")
             roomList[self.roomNumber] = itemToFind
         elif (spawnNumber == 3):
-            itemToFind = item.Note()
+            itemToFind = Item("Note")
             roomList[self.roomNumber] = itemToFind
         else:
             itemToFind = None
         #roomList[self.roomNumber] = itemToFind
-        self.foundItem = itemToFind
         print(f"{itemToFind}")
 
 r = Room(0, 0)

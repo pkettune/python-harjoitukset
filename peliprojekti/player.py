@@ -1,15 +1,20 @@
-import item
+import items
 
 class Player:
-    def __init__(self, name, items, locX, locY):
+    def __init__(self, name):
         self.name = name
-        self.items = items
-        self.location = locX, locY
+        self.items = []
+        self.location = 0, 0
         self.itemLoad = 0
 
-    def collect_item(self, itemName, itemWeight):
+    def move(self, room):
+        self.location = room
+        print(f"You are in room: {room}")
+
+    def collect_item(self, item):
+        if item in self.location.items:
+            self.items.append(item)
         newItem = (itemName, itemWeight)
-        self.items.append(newItem)
         self.itemLoad += itemWeight
         return
     
