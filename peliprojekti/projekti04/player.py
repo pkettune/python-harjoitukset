@@ -16,3 +16,8 @@ class Player:
             self.items.append(item)
             self.itemLoad += item
         return
+
+    def show_items():
+        for item in Player.self.items:
+            print(item)
+        return
