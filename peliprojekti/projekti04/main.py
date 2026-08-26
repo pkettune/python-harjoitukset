@@ -8,11 +8,6 @@ age = int(input("WHAT IS YOUR AGE?\n"))
 komento = str
 
 itemList = []
-#sadf
-def add_item(item):
-    Player.collect_item(item)
-    return
-
 def change_name():
     newName = input("Tell me your new name\n")
     name = newName
@@ -32,7 +27,7 @@ while(komento != "lopeta"):
             print("\nKomennot:\n'a(add item)'\n's(show items)'\n'name(change name)'\n'lopeta'\n")
             komento = input("Anna komento: ")
             if komento == "a":
-                add_item(Room.itemToFind)
+                Player.collect_item(Room.itemToFind)
                 #print("\na is the first letter of the alphabet")
             elif komento == "s":
                 Player.show_items()
