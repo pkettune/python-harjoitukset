@@ -1,3 +1,3 @@
-Henkilöpeli
+# Peli
 
 Petri Kettunen

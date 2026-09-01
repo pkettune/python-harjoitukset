@@ -14,6 +14,10 @@ class Player:
     def collect_item(self, item):
         if item in self.location.items:
             self.items.append(item)
-        newItem = (itemName, itemWeight)
-        self.itemLoad += itemWeight
+            self.itemLoad += item
+        return
+
+    def show_items():
+        for item in Player.self.items:
+            print(item)
         return
