@@ -6,6 +6,6 @@ def gas_converter(gallons):
 
 gallonsInput = 1
 
-while(gallonsInput > 0):
+while(gallonsInput >= 0):
     gallonsInput = int(input("How many gallons? "))
     print (gas_converter(gallonsInput))
