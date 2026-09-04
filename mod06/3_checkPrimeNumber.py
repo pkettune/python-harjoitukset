@@ -1,5 +1,3 @@
-#https://stackoverflow.com/questions/10712002/create-an-empty-list-with-certain-size-in-python
-
 numberInput = int(input("Check if number is a prime number\n"))
 
 numbers = list(range(numberInput))

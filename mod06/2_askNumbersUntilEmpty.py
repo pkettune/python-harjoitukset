@@ -3,7 +3,7 @@ numberList = []
 askedNumbers = input("Give me a number ")
 
 while (askedNumbers != ""):
-    numberList.append(askedNumbers)
+    numberList.append(int(askedNumbers))#TÄNNE PITI LAITTAA INT, MUUTEN SORT EI TOIMI OIKEIN
     askedNumbers = input("Give me a number ")
 
 numberList.sort(reverse=True)
