@@ -23,14 +23,3 @@ while (pizzaCount < 2):
     pizzaPrice = float(input("Price of the pizza? "))
     pizzaCount = pizzaCount + 1
     compare_pizzas(pizzaDiameter, pizzaPrice)
-
-
-
-
-
-
-
-
-
-    # pizza2diameter = float(input("Diameter of the 2nd pizza? "))
-    # pizza2price = float(input("Price of the 2nd pizza? "))
