@@ -8,10 +8,6 @@ def throw(sideCount):
     sideCount = sideInput
     return random.randint(1,sideCount)
 
-while (dice <= sideInput):
+while (dice != sideInput):
     dice = throw(sideInput)
-    if(dice < sideInput):
-        print(dice)
-    else:
-        print(dice)
-        break
+    print(dice)
