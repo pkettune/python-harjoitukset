@@ -8,11 +8,6 @@ age = int(input("WHAT IS YOUR AGE?\n"))
 komento = str
 
 itemList = []
-def change_name():
-    newName = input("Tell me your new name\n")
-    name = newName
-    print("\nWelcome " + name)
-    return
 
 
 while(komento != "lopeta"):

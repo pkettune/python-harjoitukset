@@ -11,8 +11,8 @@ elif kulutus <= 200:
     summa = 50 * 10
     summa += (kulutus - 50) * 8
 
-elif kulutus > 200:
-    summa += 50 * 10
+else:
+    summa = 50 * 10
     summa += 150 * 8
     summa += (kulutus - 200) * 6
 

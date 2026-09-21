@@ -21,3 +21,9 @@ class Player:
         for item in Player.self.items:
             print(item)
         return
+
+    def change_name():
+        newName = input("Tell me your new name\n")
+        name = newName
+        print("\nWelcome " + name)
+        return
