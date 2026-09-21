@@ -38,7 +38,6 @@ class Talo:
         for elevator in self.elevators:
             elevator.move_to_floor(self.bottomFloor)
 
-#https://stackoverflow.com/questions/522563/how-can-i-access-the-index-value-in-a-for-loop
 
 t = Talo(1, 9, 4)
 t.use_elevator(1, 2)

@@ -24,8 +24,6 @@ class Hissi:
 
 class Talo:
     def __init__(self, bottomFloor, highestFloor, numberOfElevator):
-        self.bottomFloor = bottomFloor
-        self.highestFloor = highestFloor
         self.numberOfElevator = []
         for i in range(numberOfElevator):
             self.numberOfElevator.append(Hissi(bottomFloor, highestFloor))
