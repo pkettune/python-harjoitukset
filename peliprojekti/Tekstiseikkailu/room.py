@@ -1,8 +1,14 @@
+from items import Item
+import random
+
+roomList = {}
+
 class Room:
     def __init__(self, name, itemToFind):
         self.name = name
         self.itemToFind = itemToFind
-        print(self.name)
+        roomList[name] = itemToFind
+        return roomList
 
 
 

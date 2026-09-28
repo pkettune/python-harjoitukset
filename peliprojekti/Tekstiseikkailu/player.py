@@ -1,10 +1,11 @@
 import items
 
 class Player:
-    def __init__(self, name, location):
+    def __init__(self, name):
         self.name = name
         self.items = []
-        self.location = location
+        self.location = 0, 0
+        self.itemLoad = 0
 
     def move(self, room):
         self.location = room

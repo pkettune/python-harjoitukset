@@ -10,14 +10,6 @@ komento = str
 
 itemList = []
 
-# Esineet
-knife = Item("Knife", 1.2)
-rock = Item("Rock", 0.3)
-note = Item("Note", 0.05)
-# Huoneet
-kitchen = Room("Kitchen", "Knife", 1.2)
-livingRoom = Room("Living Room", "Note", 0.05)
-
 
 while(komento != "lopeta"):
     if(age < 12):
@@ -27,7 +19,6 @@ while(komento != "lopeta"):
         print("\nWelcome " + name)
         Player(name)
         clear_screen
-
         while (input):
             print("\nKomennot:\n'a(add item)'\n's(show items)'\n'name(change name)'\n'lopeta'\n")
             komento = input("Anna komento: ")
@@ -40,9 +31,6 @@ while(komento != "lopeta"):
             elif komento == "name":
                 Player.change_name()
                 #print("\nit's showtime")
-            elif komento == "move":
-                clear_screen
-                print("where?")
             elif (komento == "lopeta"):
                 break
             else:
