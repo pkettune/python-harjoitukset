@@ -16,7 +16,7 @@ item_list = [
 class Item():
     def __init__(self, name):
         self.name = name
-        for item in items:
+        for item in item_list:
             if item["name"] == name:
                 self.weight = item["weight"]
         print (name)
