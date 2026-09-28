@@ -1,5 +1,5 @@
 
-items = [
+item_list = [
     {
         "name": "Knife",
         "weight": 1.2
@@ -23,4 +23,8 @@ class Item():
         print (self.weight)
         return f"{self.name}, {self.weight}"
 
-print (Item("Note"))
+    def show_items(self, itemList):
+        for item in itemList:
+            print(item)
+
+#print (Item("Note"))

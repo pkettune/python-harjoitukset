@@ -31,6 +31,6 @@ gCar.currentSpeed = 120
 
 for car in cars:
     car.drive(3)
-    print(car.distanceTravelled)
+    print(car.reg, car.distanceTravelled)
 
     #print(f"Reg: {car.reg}, Top speed: {car.topSpeed}, Current speed: {car.currentSpeed}, Distance travelled: {car.distanceTravelled}")

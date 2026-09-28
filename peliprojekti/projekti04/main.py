@@ -2,6 +2,7 @@ import random
 from player import Player
 from room import Room
 from items import Item
+from tools import clear_screen
 
 name = input("WHAT IS YOUR NAME?\n")
 age = int(input("WHAT IS YOUR AGE?\n"))
@@ -16,8 +17,8 @@ while(komento != "lopeta"):
         break
     if(age >= 12):
         print("\nWelcome " + name)
-        Player(name, itemList, 0, 0)
-
+        Player(name)
+        clear_screen
         while (input):
             print("\nKomennot:\n'a(add item)'\n's(show items)'\n'name(change name)'\n'lopeta'\n")
             komento = input("Anna komento: ")
@@ -25,10 +26,10 @@ while(komento != "lopeta"):
                 Player.collect_item(Room.itemToFind)
                 #print("\na is the first letter of the alphabet")
             elif komento == "s":
-                Player.show_items()
+                Item.show_items(name, itemList)
                 #print(f"\nDice rolled: {random.randint(1, 6)}")
             elif komento == "name":
-                change_name()
+                Player.change_name()
                 #print("\nit's showtime")
             elif (komento == "lopeta"):
                 break

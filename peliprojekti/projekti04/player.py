@@ -18,7 +18,7 @@ class Player:
         return
 
     def show_items():
-        for item in Player.self.items:
+        for item in items.item_list:
             print(item)
         return
 
