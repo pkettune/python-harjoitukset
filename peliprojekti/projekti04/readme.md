@@ -9,33 +9,37 @@ projekti/ │ ├── main.py ├── pelaaja.py │ ├── room.py │ �
 
 ### Moduulit
 
-#### esine.py
-Sisältää `Esine`-luokan.
+#### items.py
+Sisältää `Item`-luokan.
 
 Esineellä on:
 - nimi
 - paino
 
-#### huone.py
-Sisältää `Huone`-luokan.
+#### room.py
+Sisältää `Room`-luokan.
 
 Huoneella on:
 - nimi
-- lista huoneessa olevista esineistä
+- kerättävä tavara (item, jos on)
 
-#### pelaaja.py
-Sisältää `Pelaaja`-luokan.
+#### player.py
+Sisältää `Player`-luokan.
 
 Pelaajalla on:
-- nimi
-- sijainti (nykyinen huone)
-- inventaario (kerätyt esineet)
+- nimi (name)
+- kerätyt esineet (items)
+- sijainti (location)
+- kerättyjen tavaroiden yhteispaino (itemLoad)
 
 Toiminnot:
-- liikkuminen huoneesta toiseen
-- esineiden kerääminen
+- liikkuminen huoneesta toiseen (move)
+- esineiden kerääminen (collect_item)
+- näytä kerättyjen esineiden lista (show_items)
+- nimen vaihtaminen (change_name)
+- katso huonetta jossa olet (look_around)
 
-#### peli.py
+#### main.py
 Sisältää pelin päälogiikan ja valikot.
 
 #### main.py
