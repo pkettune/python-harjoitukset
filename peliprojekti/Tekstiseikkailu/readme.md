@@ -1,3 +1,0 @@
-# Tekstiseikkailu
-
-Petri Kettunen
