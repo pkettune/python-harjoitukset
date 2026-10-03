@@ -1,0 +1,1 @@
+{"name": "aaaaaaaaaaaaaaaaaaa", "age": 999, "items": ["Rock", "Note"], "location": "Olohuone", "itemLoad": 0.35}

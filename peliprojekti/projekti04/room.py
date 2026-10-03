@@ -2,33 +2,21 @@ class Room:
     def __init__(self, name, itemToFind):
         self.name = name
         self.itemToFind = itemToFind
-        print(self.name)
 
 
+def create_rooms():
+    """Create and return the game's rooms and a default starting room."""
+    kitchen = Room("Keittiö", "Knife")
+    livingRoom = Room("Olohuone", "Note")
+    bedRoom = Room("Makuuhuone", "Rock")
+    yard = Room("Yard", None)
+    shed = Room("Shed", "Knife")
 
-
-
-
-# class Room:
-#     def __init__(self, xCor, yCor):
-#         itemToFind = object
-#         self.roomNumber = xCor, yCor
-#         spawnNumber = random.randint(1, 10)
-#         print (spawnNumber)
-#         if (spawnNumber == 1):
-#             itemToFind = Item("Knife")
-#             roomList[self.roomNumber] = itemToFind
-#         elif (spawnNumber == 2):
-#             itemToFind = Item("Rock")
-#             roomList[self.roomNumber] = itemToFind
-#         elif (spawnNumber == 3):
-#             itemToFind = Item("Note")
-#             roomList[self.roomNumber] = itemToFind
-#         else:
-#             itemToFind = None
-#         #roomList[self.roomNumber] = itemToFind
-#         print(f"{itemToFind}")
-
-# r = Room(0, 0)
-
-#print(f"{roomList[itemToFind]}")
+    rooms = {
+        "k": kitchen,
+        "o": livingRoom,
+        "m": bedRoom,
+        "t": yard,
+        "v": shed
+    }
+    return rooms, bedRoom
