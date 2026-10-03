@@ -1,49 +1,86 @@
+import json
 import random
 from player import Player
 from room import Room
 from items import Item
 from tools import clear_screen
 
-name = input("WHAT IS YOUR NAME?\n")
-age = int(input("WHAT IS YOUR AGE?\n"))
-komento = str
+name = input("MIKÄ ON NIMESI?\n")
+age = int(input("KUINKA VANHA OLET?\n"))
+komento = ""
 
 itemList = []
 
-# Esineet
-knife = Item("Knife", 1.2)
-rock = Item("Rock", 0.3)
-note = Item("Note", 0.05)
-# Huoneet
-kitchen = Room("Kitchen", "Knife", 1.2)
-livingRoom = Room("Living Room", "Note", 0.05)
+kitchen = Room("Keittiö", "Knife")
+livingRoom = Room("Olohuone", "Note")
+bedRoom = Room("Makuuhuone", "Rock")
+yard = Room("Yard", None)
+shed = Room("Shed", "Knife")
 
+rooms = {
+    "k": kitchen,
+    "o": livingRoom,
+    "m": bedRoom,
+    "p": yard,
+    "v": shed
+}
 
-while(komento != "lopeta"):
-    if(age < 12):
+def save_game(self):
+    print("Tallennetaan peli.")
+    try:
+        with open("mod13/save.txt", "w") as file:
+            data = {"age": self.age, "points": self.points}
+            json.dump(data, file)
+    except FileNotFoundError:
+        print("Tiedostoa ei löydy.")
+    except IOError:
+        print("Tiedoston käsittelyssä tapahtui virhe.")
+
+def load_game(self):
+    try:
+        with open("mod13/save.txt", "r") as file:
+            data = json.load(file)
+            #print("Ladattu tallennusdata:", data)
+            self.points = data["points"]
+            self.age = data["age"]
+    except FileNotFoundError:
+        print("Tiedostoa ei löydy.")
+    except IOError:
+        print("Tiedoston käsittelyssä tapahtui virhe.")
+
+while komento != "lopeta":
+    if age < 12:
         print("alaikäinen")
         break
-    if(age >= 12):
-        print("\nWelcome " + name)
-        Player(name)
-        clear_screen
+    if age >= 12:
+        print("\nTervetuloa " + name)
+        player = Player(name)
+        player.location = bedRoom
+        clear_screen()
 
-        while (input):
-            print("\nKomennot:\n'a(add item)'\n's(show items)'\n'name(change name)'\n'lopeta'\n")
+        while True:
+            print("\nKomennot:\n'a(add item)'\n's(show items)'\n'l(look around)'\n'name(change name)'\n'm(move)'\n'lopeta'\n")
             komento = input("Anna komento: ")
             if komento == "a":
-                Player.collect_item(Room.itemToFind)
-                #print("\na is the first letter of the alphabet")
+                new_item = player.collect_item()
+                if new_item:
+                    itemList.append(new_item)
             elif komento == "s":
-                Item.show_items(name, itemList)
-                #print(f"\nDice rolled: {random.randint(1, 6)}")
+                player.show_items()
+            elif komento == "l":
+                player.look_around()
             elif komento == "name":
-                Player.change_name()
-                #print("\nit's showtime")
-            elif komento == "move":
-                clear_screen
-                print("where?")
-            elif (komento == "lopeta"):
+                player.change_name()
+            elif komento == "m":
+                clear_screen()
+                newRoom = input("Where to? (keittiö(k)/makuuhuone(m)/olohuone(o)/takapiha(t)/vaja(v)): ")
+                #https://note.nkmk.me/en/python-dict-get/
+                room = rooms.get(newRoom)
+                if room:
+                    player.move(room)
+                else:
+                    print("Unknown room")
+            elif komento == "lopeta":
                 break
             else:
                 print("\nWRONG INPUT!")
