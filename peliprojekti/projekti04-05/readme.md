@@ -1,6 +1,8 @@
 # MOD 04 ja 05 -tehtävät.
 # INTRO JA OHJEET TULEVAT KUN UUSI PELI ALOITETAAN JA NIMI + IKÄ ON ANNETTU
 
+## käynnistä main.py
+## tools.py sisällä on funktiot introlle ja ohjeille
 
 
 <!-- 
