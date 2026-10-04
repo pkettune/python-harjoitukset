@@ -3,7 +3,7 @@
 
 
 
-
+<!-- 
 
 # Tekstiseikkailu
 
@@ -122,7 +122,7 @@ Lopeta
 
 Valinta: 2
 
-Keräsit esineen: Avain
+Keräsit esineen: Avain -->
 
 ## Tekijä
 Petri Kettunen
