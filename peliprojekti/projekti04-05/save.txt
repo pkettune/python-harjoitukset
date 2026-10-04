@@ -1,0 +1,1 @@
+{"name": "asdf", "age": 34, "items": ["Kivi"], "location": "Takapiha", "itemLoad": 0.3}

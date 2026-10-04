@@ -1,1 +1,0 @@
-{"name": "asdfasdf", "age": 555, "items": ["Rock"], "location": "Makuuhuone", "itemLoad": 0.3}

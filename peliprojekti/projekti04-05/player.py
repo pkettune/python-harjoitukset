@@ -1,5 +1,6 @@
 import items
 
+
 class Player:
     def __init__(self, name):
         self.name = name
@@ -15,24 +16,25 @@ class Player:
         if self.location.itemToFind == None:
             print("Ei kerättäviä esineitä.")
             return
+
         itemName = self.location.itemToFind
         item = items.Item(itemName)
         self.items.append(item)
         self.itemLoad = self.itemLoad + item.weight
         self.location.itemToFind = None
-        print("Picked up: " + itemName)
+        print("Keräsit esineen: " + itemName)
         return
 
     def show_items(self):
         if not self.items:
-            print("No items")
+            print("Ei esineitä")
             return
         for item in self.items:
             print(item.name)
         return
 
     def change_name(self):
-        newName = input("Tell me your new name\n")
+        newName = input("Uusi nimesi?\n")
         self.name = newName
         print("\nHei " + self.name)
         return

@@ -5,12 +5,11 @@ class Room:
 
 
 def create_rooms():
-    """Create and return the game's rooms and a default starting room."""
-    kitchen = Room("Keittiö", "Knife")
-    livingRoom = Room("Olohuone", "Note")
-    bedRoom = Room("Makuuhuone", "Rock")
-    yard = Room("Yard", None)
-    shed = Room("Shed", "Knife")
+    kitchen = Room("Keittiö", "Veitsi")
+    livingRoom = Room("Olohuone", "Viesti")
+    bedRoom = Room("Makuuhuone", "Kivi")
+    yard = Room("Takapiha", None)
+    shed = Room("Vaja", "Lapio")
 
     rooms = {
         "k": kitchen,
