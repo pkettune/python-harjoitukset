@@ -5,7 +5,7 @@
 ## tools.py sisällä on funktiot introlle ja ohjeille
 
 
-<!-- 
+
 
 # Tekstiseikkailu
 
@@ -124,7 +124,7 @@ Lopeta
 
 Valinta: 2
 
-Keräsit esineen: Avain -->
+Keräsit esineen: Avain
 
 ## Tekijä
 Petri Kettunen
