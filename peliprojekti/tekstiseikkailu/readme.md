@@ -1,11 +1,21 @@
 # Tekstiseikkailu
 
-
 Yksinkertainen tekstipohjainen seikkailupeli, jossa pelaaja voi liikkua huoneiden välillä ja kerätä esineitä.
+
+Tavoitteena on tehdä jotain elämällään.
 
 ## Projektin rakenne
 
-projekti/ │ ├── main.py ├── pelaaja.py │ ├── room.py │ └── items.py │ └── tools/
+tekstiseikkailu
+├── main.py
+├── player.py
+├── room.py
+├── items.py
+├── tools.py
+├── intro.txt
+├── ohjeet.txt
+└── save.ext
+
 
 ### Moduulit
 
@@ -42,25 +52,12 @@ Toiminnot:
 - liikkuminen huoneesta toiseen (move)
 - esineiden kerääminen (collect_item)
 - näytä kerättyjen esineiden lista (show_items)
+- käytä esinettä (use_item)
 - nimen vaihtaminen (change_name)
 - katso huonetta jossa olet (look_around)
 
 
 ## Luokat
-
-### Esine
-
-| Ominaisuus | Tyyppi |
-|------------|---------|
-| nimi | str |
-| paino | float |
-
-### Huone
-
-| Ominaisuus | Tyyppi |
-|------------|---------|
-| nimi | str |
-| esineet | list |
 
 ### Pelaaja
 
@@ -71,22 +68,27 @@ Toiminnot:
 | sijainti | Huone |
 | tavaroiden yhteispaino | int |
 
-### Metodit
+### Huone
 
-#### Pelaaja.liiku(kohde)
+| Ominaisuus | Tyyppi |
+|------------|---------|
+| nimi | str |
+| esineet | list |
 
-Siirtää pelaajan annettuun huoneeseen.
+### Esine
 
-#### Pelaaja.keraa_esine(esine)
+| Ominaisuus | Tyyppi |
+|------------|---------|
+| nimi | str |
+| paino | float |
 
-Lisää esineen pelaajan inventaarioon ja poistaa sen huoneesta.
 
 ## Ohjelman toiminta
 
 1. Ohjelma luo käynnistyessään:
    - pelaajaolion
    - 5 huonetta
-   - 4 esinettä
+   - 5 esinettä
 
 2. Pelaaja voi:
    - liikkua huoneiden välillä
@@ -97,26 +99,8 @@ Lisää esineen pelaajan inventaarioon ja poistaa sen huoneesta.
 
 3. Pelivalikko toistuu, kunnes käyttäjä lopettaa ohjelman.
 
-## UML-kaavio
+4. Pelin tallennus ja lataus.
 
-Projektin luokkarakenne:
-
-- Pelaaja omistaa 0..* esinettä.
-- Pelaaja sijaitsee yhdessä huoneessa.
-- Huone sisältää 0..1 esineen (tai useita toteutuksesta riippuen).
-- Esineellä on nimi ja paino.
-
-## Esimerkkikäyttö
-
-
-Liiku
-Kerää esine
-Näytä inventaario
-Lopeta
-
-Valinta: 2
-
-Keräsit esineen: Avain
 
 ## Tekijä
 Petri Kettunen
