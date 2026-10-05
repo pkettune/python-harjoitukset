@@ -6,15 +6,18 @@ Tavoitteena on tehdä jotain elämällään.
 
 ## Projektin rakenne
 
-tekstiseikkailu
-├── main.py
-├── player.py
-├── room.py
-├── items.py
-├── tools.py
-├── intro.txt
-├── ohjeet.txt
-└── save.ext
+$ tree
+.
+├──peliprojekti
+   ├──tekstiseikkailu
+      ├──main.py
+      ├──player.py
+      ├──room.py
+      ├──items.py
+      ├──tools.py
+      ├──intro.txt
+      ├──ohjeet.txt
+      ├──save.ext
 
 
 ### Moduulit
