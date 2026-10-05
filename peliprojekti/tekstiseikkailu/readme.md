@@ -1,6 +1,6 @@
 # Tekstiseikkailu
 
-Yksinkertainen tekstipohjainen seikkailupeli, jossa pelaaja voi liikkua huoneiden välillä ja kerätä esineitä.
+Yksinkertainen tekstipohjainen room escape, jossa pelaaja voi liikkua huoneiden välillä ja kerätä esineitä.
 
 Tavoitteena on tehdä jotain elämällään.
 
