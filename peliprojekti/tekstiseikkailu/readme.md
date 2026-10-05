@@ -2,7 +2,7 @@
 
 Yksinkertainen tekstipohjainen room escape, jossa pelaaja voi liikkua huoneiden välillä ja kerätä esineitä.
 
-Tavoitteena on tehdä jotain elämällään.
+Tavoitteena on ottaa itseään niskasta kiinni ja lähteä levittämään tasa-arvoa.
 
 ## Projektin rakenne
 

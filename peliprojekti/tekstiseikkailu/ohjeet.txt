@@ -1,1 +1,1 @@
-Peliohjeet: Paina kirjaimia
+Peliohjeet: Anna komentoa vastaava syöte ja paina Enter
