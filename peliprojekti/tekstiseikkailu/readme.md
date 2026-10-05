@@ -1,30 +1,11 @@
-# MOD 04 ja 05 -tehtävät.
-# INTRO JA OHJEET TULEVAT KUN UUSI PELI ALOITETAAN JA NIMI + IKÄ ON ANNETTU
-
-## käynnistä main.py
-## tools.py sisällä on funktiot introlle ja ohjeille
-
-
-
-
 # Tekstiseikkailu
+
 
 Yksinkertainen tekstipohjainen seikkailupeli, jossa pelaaja voi liikkua huoneiden välillä ja kerätä esineitä.
 
-Tavoitteena on tehdä jotain elämällään.
-
 ## Projektin rakenne
 
-tekstiseikkailu
-├── main.py
-├── player.py
-├── room.py
-├── items.py
-├── tools.py
-├── intro.txt
-├── ohjeet.txt
-└── save.ext
-
+projekti/ │ ├── main.py ├── pelaaja.py │ ├── room.py │ └── items.py │ └── tools/
 
 ### Moduulit
 
@@ -61,12 +42,25 @@ Toiminnot:
 - liikkuminen huoneesta toiseen (move)
 - esineiden kerääminen (collect_item)
 - näytä kerättyjen esineiden lista (show_items)
-- käytä esinettä (use_item)
 - nimen vaihtaminen (change_name)
 - katso huonetta jossa olet (look_around)
 
 
 ## Luokat
+
+### Esine
+
+| Ominaisuus | Tyyppi |
+|------------|---------|
+| nimi | str |
+| paino | float |
+
+### Huone
+
+| Ominaisuus | Tyyppi |
+|------------|---------|
+| nimi | str |
+| esineet | list |
 
 ### Pelaaja
 
@@ -77,27 +71,22 @@ Toiminnot:
 | sijainti | Huone |
 | tavaroiden yhteispaino | int |
 
-### Huone
+### Metodit
 
-| Ominaisuus | Tyyppi |
-|------------|---------|
-| nimi | str |
-| esineet | list |
+#### Pelaaja.liiku(kohde)
 
-### Esine
+Siirtää pelaajan annettuun huoneeseen.
 
-| Ominaisuus | Tyyppi |
-|------------|---------|
-| nimi | str |
-| paino | float |
+#### Pelaaja.keraa_esine(esine)
 
+Lisää esineen pelaajan inventaarioon ja poistaa sen huoneesta.
 
 ## Ohjelman toiminta
 
 1. Ohjelma luo käynnistyessään:
    - pelaajaolion
    - 5 huonetta
-   - 5 esinettä
+   - 4 esinettä
 
 2. Pelaaja voi:
    - liikkua huoneiden välillä
@@ -108,8 +97,26 @@ Toiminnot:
 
 3. Pelivalikko toistuu, kunnes käyttäjä lopettaa ohjelman.
 
-4. Pelin tallennus ja lataus.
+## UML-kaavio
 
+Projektin luokkarakenne:
+
+- Pelaaja omistaa 0..* esinettä.
+- Pelaaja sijaitsee yhdessä huoneessa.
+- Huone sisältää 0..1 esineen (tai useita toteutuksesta riippuen).
+- Esineellä on nimi ja paino.
+
+## Esimerkkikäyttö
+
+
+Liiku
+Kerää esine
+Näytä inventaario
+Lopeta
+
+Valinta: 2
+
+Keräsit esineen: Avain
 
 ## Tekijä
 Petri Kettunen
