@@ -10,12 +10,14 @@ def create_rooms():
     bedRoom = Room("Makuuhuone", "Kivi")
     yard = Room("Takapiha", None)
     shed = Room("Vaja", "Lapio")
+    door = Room("Ulko-ovi", None)
 
     rooms = {
         "k": kitchen,
         "o": livingRoom,
         "m": bedRoom,
         "t": yard,
-        "v": shed
+        "v": shed,
+        "u": door
     }
     return rooms, bedRoom

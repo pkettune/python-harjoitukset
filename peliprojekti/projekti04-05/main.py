@@ -6,7 +6,7 @@ from tools import clear_screen, new_game, save_game, load_game, initialize_game
 
 komento = ""
 player = None
-
+room = None
 player, name, age, rooms, bedRoom, itemList = initialize_game()
 
 while komento != "lopeta":
@@ -23,8 +23,8 @@ while komento != "lopeta":
             player.location = bedRoom
 
         while True:
-            print("\nKomennot:\n'a(add item)'\n's(show items)'\n'l(look around)'\n'nimi(muuta nimesi)'\n'm(move)'\n'tallenna(tallenna peli)'\n'lataa(lataa peli)'\n'lopeta'\n")
-            komento = input("Anna komento: ")
+            print("\nKomennot:\n'a(add item)'\n's(show items)'\n'k(käytä tavara)'\n'l(look around)'\n'nimi(muuta nimesi)'\n'm(move)'\n'tallenna(tallenna peli)'\n'lataa(lataa peli)'\n'lopeta'\n")
+            komento = input("Anna komento: ").casefold()
             clear_screen()
             if komento == "a":
                 new_item = player.collect_item()
@@ -36,13 +36,27 @@ while komento != "lopeta":
             elif komento == "l":
                 player.look_around()
             elif komento == "m":
-                newRoom = input("Minne haluat mennä?\n\nKeittiö(k)\nMakuuhuone(m)\nOlohuone(o)\nTakapiha(t)\nVaja(v)): ")
+                if player.sword == False:
+                    newRoom = input("Minne haluat mennä?\n\nKeittiö(k)\nMakuuhuone(m)\nOlohuone(o)\nTakapiha(t)\nVaja(v)): ").casefold()
+                else:
+                    newRoom = input("Minne haluat mennä?\n\nKeittiö(k)\nMakuuhuone(m)\nOlohuone(o)\nTakapiha(t)\nVaja(v)\nUlko-ovi(u)): ").casefold()
                 #https://note.nkmk.me/en/python-dict-get/
                 room = rooms.get(newRoom)
-                if room:
+                clear_screen()
+                print (room.name)
+                if room.name == "Vaja" and player.shedIsLocked == True:
+                    print("Vajan ovi on lukossa")
+                    room = rooms.get("t")
+                    player.move(room)
+                    player.location = room.name
+                elif room.name == "Vaja" and player.shedIsLocked == False:
+                    player.move(room)
+                elif room:
                     player.move(room)
                 else:
                     print("Unknown room")
+            elif komento == "k":
+                player.use_item(room)
             elif komento == "nimi":
                 player.change_name()
             elif komento == "tallenna":
