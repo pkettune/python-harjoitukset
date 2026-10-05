@@ -7,6 +7,8 @@ from tools import clear_screen, new_game, save_game, load_game, initialize_game
 komento = ""
 player = None
 room = None
+
+
 player, name, age, rooms, itemList = initialize_game()
 
 while komento != "lopeta":
@@ -23,7 +25,7 @@ while komento != "lopeta":
             player.location = bedRoom
 
         while True:
-            print("\nKomennot:\n'a(add item)'\n's(show items)'\n'k(käytä tavara)'\n'l(look around)'\n'nimi(muuta nimesi)'\n'm(move)'\n'tallenna(tallenna peli)'\n'lopeta'\n")
+            print("\nKomennot:\n'a(poimi esine)'\n's(näytä esineet)'\n'k(käytä esinettä)'\n'l(katso ympärillesi)'\n'm(liiku)'\n'nimi(muuta nimesi)'\n'tallenna(tallenna peli)'\n'lopeta'\n")
             komento = input("Anna komento: ").casefold()
             clear_screen()
             if komento == "a":

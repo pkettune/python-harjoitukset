@@ -4,6 +4,12 @@ from player import Player
 from items import Item
 from room import create_rooms
 
+#os.path.dirname(path, /)
+#Return the directory name of pathname path. This is the first element of the pair returned by passing path to the function split().
+#os.path.join(path, /, *paths)
+#Join one or more path segments intelligently. The return value is the concatenation of path and all members of *paths,
+#with exactly one directory separator following each non-empty part, except the last.
+#That is, the result will only end in a separator if the last part is either empty or ends in a separator.
 def intro():
     filename = "intro.txt"
     try:
@@ -103,16 +109,15 @@ def start_menu(filename="save.txt", rooms=None):
             choice = input("Valintasi: ")
         except Exception:
             print("\nVirheellinen valinta.")
+
         if choice == "uusi":
             return new_game()
         elif choice == "lataa":
-            # Pass rooms so load_game can resolve location and restore room state
             return load_game(filename, rooms=rooms)
 
         elif choice == "poista":
             remove_save(filename)
             continue
-
         elif choice == "lopeta":
             exit()
         else:

@@ -74,7 +74,7 @@ class Player:
                 print("Kaivoit kuopan ja löysit sieltä MAHTIMIEKAN!")
                 if self.itemLoad > 3.05:
                     print("Mutta tavarasi painavat liikaa, etkä voi kantaa mahtimiekkaa mukanasi...")
-                    print("Ainoa mahdollisuutesi on vain yrittää uudelleen")
+                    print("Ainoa mahdollisuutesi on resetoida peli ja yrittää uudelleen")
                     return
                 else:
                     self.sword = True
