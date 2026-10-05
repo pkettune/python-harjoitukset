@@ -102,6 +102,7 @@ Lisää esineen pelaajan inventaarioon ja poistaa sen huoneesta.
    - tarkastella inventaariotaan
    - tarkatella ympärillensä
    - kerätä esineitä
+   - käyttää esineitä
 
 3. Pelivalikko toistuu, kunnes käyttäjä lopettaa ohjelman.
 
