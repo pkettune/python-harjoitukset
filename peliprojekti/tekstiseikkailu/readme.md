@@ -6,8 +6,6 @@ Tavoitteena on tehdä jotain elämällään.
 
 ## Projektin rakenne
 
-$ tree
-.
 ├──peliprojekti
    ├──tekstiseikkailu
       ├──main.py
